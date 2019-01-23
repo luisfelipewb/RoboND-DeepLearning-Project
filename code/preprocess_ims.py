@@ -102,7 +102,7 @@ def combine_masks(processed_folder):
 
         stacked = np.stack((im4-1, im2, im3), 2)
         argmin = np.argmin(stacked, axis=-1)
-        im = np.stack((argmin==0, argmin==1, argmin==2), 2)
+        im = np.stack((argmin==0, argmin==1, argmin==2), 2) * 255
 
         base_name = os.path.basename(i)
         ind = base_name.find('cam')
