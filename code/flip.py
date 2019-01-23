@@ -18,7 +18,7 @@ def flip_image(image_path, save_path):
     rotated_image.save(save_path)
 
 
-for path in path_list[2]:
+for path in path_list:
     image_list = os.listdir(path)
     image_number = 0
 
